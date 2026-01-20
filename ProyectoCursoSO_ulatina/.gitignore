@@ -1,0 +1,10 @@
+# Vagrant
+.vagrant/
+
+# VirtualBox
+*.vdi
+*.vbox
+*.vbox-prev
+
+# Docker
+.env
