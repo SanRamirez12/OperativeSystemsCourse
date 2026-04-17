@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "almalinux/9"
   config.vm.box_version = "9.7.20260111"
   config.vm.hostname = "almalinux-pinguinitos-vagrant"
-
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
   # by making sure your Vagrantfile isn't accessible to the vagrant box.
   # If you use this you may want to enable additional shared subfolders as
   # shown above.
-  config.vm.synced_folder ".", "/vagrant", disabled: true
+  # config.vm.synced_folder ".", "/vagrant", disabled: true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
